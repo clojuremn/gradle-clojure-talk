@@ -3,9 +3,9 @@
 ## Topics
 
 - History of Gradle (and my history with it)
-  - Gradle started in 2009-2010
+  - Gradle started in 2007
+    - Originally built on Ant and Ivy
   - See [their trend](https://trends.google.com/trends/explore?date=2010-01-01%202018-03-21&q=%2Fm%2F04tj5z,%2Fm%2F080c0g9,%2Fm%2F028m4s)
-  - [JVM Language trends](https://trends.google.com/trends/explore?date=2010-01-01%202018-03-21&q=%2Fm%2F03yb8hb,%2Fm%2F0_lcrx4,%2Fm%2F02js86,%2Fm%2F091hdj)
   - Been writing Gradle plugins since 2011 (pre 1.0)
   - Contributed a few plugins to Gradle core (lucky for me, so that I didn't have to maintain them)
     - Findbugs
@@ -13,21 +13,20 @@
     - PMD
     - Jacoco
   - Been maintaining Git-related plugins since 2012
-  - Clojuresque ([Meikel Brandmeyer](https://github.com/kotarak))
+  - [Clojuresque](https://bitbucket.org/clojuresque/clojuresque) by [Meikel Brandmeyer](https://github.com/kotarak)
     - Started in 2009
     - Hasn't been maintained in a while
-    - Documentation was hard to follow
-  - [Graclj](https://github.com/ajoberstar/graclj)
+    - Documentation was hard to follow (split across a bunch of repos)
+  - [Graclj](https://github.com/ajoberstar/graclj) by me
     - Targeted at Gradle's new (at the time, now deprecated) "model space"
     - The model was meant to address a bunch of configuration ordering and visibility issues that can get gnarly with some plugins. It was going to require
     - Worked on 2015-2016, but ran into hurdles with the slow progress and poor documentation of the model. Essentially abandoned it at that time.
   - [cursive.clojure](https://github.com/cursive-ide/gradle-clojure) by [Colin Fleming](https://github.com/cmf)
     - Started in 2016, meant to address Colin's needs for building the Cursive IDE, which is a mix of Kotlin and Clojure code (from what I understand)
     - Intentionally a very minimal plugin, mostly just compilation support.
-    -
   - [gradle-clojure](https://github.com/gradle-clojure)
     - A motivated individual [John Szakmeister](https://github.com/jszakmeister) reached out to Colin and I to try to get some momentum on a Gradle plugin.
-    - He organized a call with one of Gradle's devs, which helped us figure out some parameters of the project.
+    - He organized a call with one of Gradle's devs, which helped guide us.
     - Since then I've
 - Gradle wrapper
   - Wrapper vs normal install
