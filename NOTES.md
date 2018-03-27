@@ -5,6 +5,7 @@
 - History of Gradle (and my history with it)
   - Gradle started in 2007
     - Originally built on Ant and Ivy
+    - Focuses on build automation for
   - See [their trend](https://trends.google.com/trends/explore?date=2010-01-01%202018-03-21&q=%2Fm%2F04tj5z,%2Fm%2F080c0g9,%2Fm%2F028m4s)
   - Been writing Gradle plugins since 2011 (pre 1.0)
   - Contributed a few plugins to Gradle core (lucky for me, so that I didn't have to maintain them)
