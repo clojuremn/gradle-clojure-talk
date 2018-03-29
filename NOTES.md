@@ -2,26 +2,46 @@
 
 ## Topics
 
-- History of Gradle (and my history with it)
+- Gradle History
   - Gradle started in 2007
     - Originally built on Ant and Ivy
-    - Focuses on build automation for
-  - See [their trend](https://trends.google.com/trends/explore?date=2010-01-01%202018-03-21&q=%2Fm%2F04tj5z,%2Fm%2F080c0g9,%2Fm%2F028m4s)
-  - Been writing Gradle plugins since 2011 (pre 1.0)
-  - Contributed a few plugins to Gradle core (lucky for me, so that I didn't have to maintain them)
-    - Findbugs
-    - JDepend
-    - PMD
-    - Jacoco
-  - Been maintaining Git-related plugins since 2012
+    - Combination of declarative and imperative
+    - Plugins usually provide a domain model that can leverage conventions
+    - See [their trend](https://trends.google.com/trends/explore?date=2010-01-01%202018-03-21&q=%2Fm%2F04tj5z,%2Fm%2F080c0g9,%2Fm%2F028m4s)
+  - I've been writing Gradle plugins since 2011 (pre 1.0)
+    - Contributed some of them to Gradle core
+    - Creator and maintainer of gradle-git (and related plugins) since 2012
+- Gradle Intro
+  - Install Gradle
+  - Initialize a project
+  - Gradle wrapper
+    - Wrapper vs normal install
+  - Gradle basics
+    - Tasks
+    - Task dependencies
+  - Gradle's 3 phases (initialization, configuration, execution)
+      - init scripts
+      - settings.gradle
+      - build.gradle
+  - Show basic Java project
+    - Project structure
+    - Repositories
+    - Dependencies
+    - Test execution
+  - Gradle plugins
+    - Core plugins
+    - buildSrc
+    - Plugin portal
+- Clojure and Gradle History
   - [Clojuresque](https://bitbucket.org/clojuresque/clojuresque) by [Meikel Brandmeyer](https://github.com/kotarak)
     - Started in 2009
-    - Hasn't been maintained in a while
     - Documentation was hard to follow (split across a bunch of repos)
+    - Hasn't been maintained in a while
   - [Graclj](https://github.com/ajoberstar/graclj) by me
     - Targeted at Gradle's new (at the time, now deprecated) "model space"
-    - The model was meant to address a bunch of configuration ordering and visibility issues that can get gnarly with some plugins. It was going to require
-    - Worked on 2015-2016, but ran into hurdles with the slow progress and poor documentation of the model. Essentially abandoned it at that time.
+    - The model was meant to address a bunch of configuration ordering and visibility issues that can get gnarly with some plugins.
+    - Worked on 2015-2016, but ran into hurdles with the slow progress and poor documentation of the model.
+    - I abandoned work on it, and eventually Gradle announced that they were going to deprecate the model space.
   - [cursive.clojure](https://github.com/cursive-ide/gradle-clojure) by [Colin Fleming](https://github.com/cmf)
     - Started in 2016, meant to address Colin's needs for building the Cursive IDE, which is a mix of Kotlin and Clojure code (from what I understand)
     - Intentionally a very minimal plugin, mostly just compilation support.
@@ -29,31 +49,34 @@
     - A motivated individual [John Szakmeister](https://github.com/jszakmeister) reached out to Colin and I to try to get some momentum on a Gradle plugin.
     - He organized a call with one of Gradle's devs, which helped guide us.
     - Since then I've
-- Gradle wrapper
-  - Wrapper vs normal install
-- Gradle's 3 phases (initialization, configuration, execution)
-  - init scripts
-  - settings.gradle
-  - build.gradle
-- Gradle plugins
-  - Core plugins
-  - Plugin portal
-- Multi project builds
-  - Hava a Java library
-  - Have a Kotlin library
-  - Clojure backend
-  - Clojurescript frontend
-- Polyglot builds
-  - Java depending on Clojure
-  - Kotlin depending on Clojure
-  - Clojure depending on Java
-  - Clojure depending on Kotlin
-- REPL usage
-  - Local usage (is that even possible?)
-  - Atom usage
-  - Cursive usage (?)
-- Executing clojure.test tests
-  - Test report
-  - Test selection
-  - Test logging (use as example of init script)
-  - Continuous mode
+- gradle-clojure Usage
+  - Basics
+    - Project Structure
+    - Dependencies from Clojars
+    - Publish to Clojars
+    - AOT compile
+      - Reflection warnings
+      - Fail on reflection warnings
+  - REPL usage
+    - dev dependencies
+    - Only background (Gradle has bad support for user input)
+    - Local usage (telnet and rlwrap)
+      - I'd love to get rebel-readline to work for this
+    - Atom usage
+  - Executing clojure.test tests
+    - Test report
+    - Test selection
+    - Test logging (use as example of init script)
+    - Continuous mode
+  - Uberjar
+    - Gradle Shadow plugin
+  - Polyglot builds
+    - Java depending on Clojure
+    - Kotlin depending on Clojure
+    - Clojure depending on Java
+    - Clojure depending on Kotlin
+  - Multi project builds
+    - Hava a Java library
+    - Have a Kotlin library
+    - Clojure backend
+    - Clojurescript frontend
