@@ -28,3 +28,32 @@ task myThird(dependsOn: myFirst) {
     println 'build.gradle    Execution:      myThird action'
   }
 }
+
+task reverse {
+  group = 'text'
+
+  ext.source = file('src/raw.txt')
+  ext.dest = file('build/reverse.txt')
+
+  inputs.file source
+  outputs.file dest
+
+  doFirst {
+    dest.text = source.text.reverse()
+  }
+}
+
+task uppercase {
+  group = 'text'
+  dependsOn reverse
+
+  ext.source = reverse.dest
+  ext.dest = file('build/uppercase.txt')
+
+  inputs.file source
+  outputs.file dest
+
+  doFirst {
+    dest.text = source.text.toUpperCase()
+  }
+}
