@@ -1,0 +1,41 @@
+// Normally you would store thise in ~/.gradle/init.d
+println 'init.gradle     Initialization: Evaluating init script'
+// This is where you could put developer-specific config
+
+
+// You can listen for parts
+settingsEvaluated {
+  println 'init.gradle     Initialization: Settings evaluated'
+}
+
+projectsLoaded {
+  println 'init.gradle     Initialization: Projects loaded'
+}
+
+projectsEvaluated {
+  println 'init.gradle     Configuration:  Projects evaluated'
+}
+
+beforeProject { prj ->
+  println "init.gradle     Configuration:  Before ${prj.name}"
+}
+
+afterProject { prj ->
+  println "init.gradle     Configuration:  After ${prj.name}"
+}
+
+buildFinished { result ->
+  println "init.gradle     Execution:      Build finished: ${result.failure ? 'failure' : 'success' }"
+}
+
+taskGraph.beforeTask { task ->
+  println "init.gradle     Execution:      Before: ${task.path}"
+}
+
+taskGraph.afterTask { task ->
+  println "init.gradle     Execution:      After: ${task.path}"
+}
+
+taskGraph.whenReady { graph ->
+  println "init.gradle     Execution:      Selected tasks: ${graph.allTasks.collect { it.path }}"
+}

@@ -4,3 +4,12 @@
  * This is a general purpose Gradle build.
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
+
+println 'build.gradle    Configuration:  Evaluating build script'
+
+task myFirst {
+  doFirst {
+    println 'build.gradle    Execution:      myFirst action'
+  }
+  println 'build.gradle    Configuration:  myFirst config'
+}
