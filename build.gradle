@@ -8,8 +8,23 @@
 println 'build.gradle    Configuration:  Evaluating build script'
 
 task myFirst {
+  group = 'demo'
   doFirst {
     println 'build.gradle    Execution:      myFirst action'
   }
   println 'build.gradle    Configuration:  myFirst config'
+}
+
+task mySecond(dependsOn: myFirst) {
+  group = 'demo'
+  doFirst {
+    println 'build.gradle    Execution:      mySecond action'
+  }
+}
+
+task myThird(dependsOn: myFirst) {
+  group = 'demo'
+  doFirst {
+    println 'build.gradle    Execution:      myThird action'
+  }
 }
