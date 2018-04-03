@@ -1,28 +1,7 @@
 # Notes for talk
 
-## Topics
+Stuff left to add:
 
-- Gradle Intro
-  - Install Gradle
-  - Initialize a project
-  - Gradle wrapper
-    - Wrapper vs normal install
-  - Gradle basics
-    - Tasks
-    - Task dependencies
-  - Gradle's 3 phases (initialization, configuration, execution)
-      - init scripts
-      - settings.gradle
-      - build.gradle
-  - Show basic Java project
-    - Project structure
-    - Repositories
-    - Dependencies
-    - Test execution
-  - Gradle plugins
-    - Core plugins
-    - buildSrc
-    - Plugin portal
 - gradle-clojure Usage
   - Basics
     - Project Structure
@@ -34,8 +13,6 @@
   - REPL usage
     - dev dependencies
     - Only background (Gradle has bad support for user input)
-    - Local usage (telnet and rlwrap)
-      - I'd love to get rebel-readline to work for this
     - Atom usage
   - Executing clojure.test tests
     - Test report
@@ -44,13 +21,8 @@
     - Continuous mode
   - Uberjar
     - Gradle Shadow plugin
-  - Polyglot builds
+  - Polyglot builds (just a couple of these examples)
     - Java depending on Clojure
     - Kotlin depending on Clojure
     - Clojure depending on Java
     - Clojure depending on Kotlin
-  - Multi project builds
-    - Hava a Java library
-    - Have a Kotlin library
-    - Clojure backend
-    - Clojurescript frontend
