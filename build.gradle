@@ -4,3 +4,23 @@
  * This is a general purpose Gradle build.
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
+plugins {
+  id 'gradle-clojure.clojure' version '0.3.1'
+}
+
+group = 'org.clojars.ajoberstar'
+version = '0.1.0-SNAPSHOT'
+
+repositories {
+  jcenter()
+  maven {
+    name = 'Clojars'
+    url = 'https://repo.clojars.org/'
+  }
+}
+
+
+dependencies {
+  compile 'org.clojure:clojure:1.9.0'
+  testCompile 'junit:junit:4.12'
+}

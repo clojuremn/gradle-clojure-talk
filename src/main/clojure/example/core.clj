@@ -1,0 +1,4 @@
+(ns example.core)
+
+(defn greetings [name]
+  (str "Greetings " name "!"))
