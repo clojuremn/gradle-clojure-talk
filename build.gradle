@@ -19,8 +19,13 @@ repositories {
   }
 }
 
-
 dependencies {
   compile 'org.clojure:clojure:1.9.0'
   testCompile 'junit:junit:4.12'
+}
+
+compileClojure {
+  options.aotCompile = true
+  options.reflectionWarnings.enabled = true
+  options.reflectionWarnings.asErrors = true
 }
